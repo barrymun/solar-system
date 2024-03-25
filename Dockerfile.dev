@@ -1,0 +1,10 @@
+FROM oven/bun:1 as base
+
+RUN mkdir -p /usr/src/client
+WORKDIR /usr/src/client
+COPY . /usr/src/client/
+
+RUN bun install
+
+EXPOSE 5173/tcp
+CMD [ "bun", "run", "dev" ]
