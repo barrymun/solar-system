@@ -1,3 +1,27 @@
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  z-index: -1;
+  opacity: 1;
+}
+
 #sun {
   
 }
