@@ -12,16 +12,23 @@
 
 .star {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 1px;
+  height: 1px;
   background: #fff;
   border-radius: 50%;
   animation-name: twinkle;
   animation-iteration-count: infinite;
-  z-index: -1;
+  z-index: 0;
   opacity: 1;
 }
 
+.planet {
+  position: absolute;
+  z-index: 1;
+}
+
 #sun {
-  
+  position: absolute;
+  top: calc(50% - 112px);
+  left: calc(50% - 112px);
 }

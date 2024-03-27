@@ -1,1 +1,1 @@
-export const totalStars = 1000;
+export const totalStars = 500;
