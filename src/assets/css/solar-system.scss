@@ -22,13 +22,45 @@
   opacity: 1;
 }
 
-.planet {
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#sun {
+  top: calc(50% - 112px);
+  left: calc(50% - 112px);
   position: absolute;
   z-index: 1;
 }
 
-#sun {
+.planet {
   position: absolute;
-  top: calc(50% - 112px);
-  left: calc(50% - 112px);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+#mercury {
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  width: 4.75%;
+  height: 4.75%;
+  animation: orbit 3s linear infinite;
+}
+
+#venus {
+  /* top: calc(50% - 75px);
+  left: calc(50% - 75px); */
+  width: 0.85%;
+  height: 0.85%;
+}
+
+#earth {
+  /* top: calc(50% - 100px);
+  left: calc(50% - 100px); */
+  width: 0.92%;
+  height: 0.92%;
+  top: calc(50% - 100px);
+  right: calc(50% - 100px);
 }
