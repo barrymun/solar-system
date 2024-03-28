@@ -28,6 +28,12 @@
   }
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 #sun {
   top: calc(50% - 112px);
   left: calc(50% - 112px);
@@ -39,14 +45,18 @@
   position: absolute;
   z-index: 1;
   border-radius: 50%;
-}
+  top: calc(50%);
+  left: calc(25%);
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  animation: orbit 10s linear infinite;
 
-#mercury {
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
-  width: 4.75%;
-  height: 4.75%;
-  animation: orbit 3s linear infinite;
+  #mercury {
+    width: 3em;
+    height: 3em;
+    animation: spin 10s linear infinite;
+  }
 }
 
 #venus {
