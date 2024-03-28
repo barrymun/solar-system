@@ -41,36 +41,37 @@
   z-index: 1;
 }
 
-.planet {
+.axis {
   position: absolute;
   z-index: 1;
   border-radius: 50%;
-  top: calc(50%);
-  left: calc(25%);
-  width: 50%;
+  top: 50%;
+  left: 0%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   animation: orbit 10s linear infinite;
 
-  #mercury {
-    width: 3em;
-    height: 3em;
+  .planet {
+    position: absolute;
     animation: spin 10s linear infinite;
   }
-}
 
-#venus {
-  /* top: calc(50% - 75px);
-  left: calc(50% - 75px); */
-  width: 0.85%;
-  height: 0.85%;
-}
+  #mercury {
+    width: 2em;
+    height: 2em;
+    left: 38%;
+  }
 
-#earth {
-  /* top: calc(50% - 100px);
-  left: calc(50% - 100px); */
-  width: 0.92%;
-  height: 0.92%;
-  top: calc(50% - 100px);
-  right: calc(50% - 100px);
+  #venus {
+    width: 4em;
+    height: 4em;
+    left: 33%;
+  }
+
+  #earth {
+    width: 3em;
+    height: 3em;
+    left: 29%;
+  }
 }
