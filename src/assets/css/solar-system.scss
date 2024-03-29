@@ -1,4 +1,14 @@
-$sun-width: 224px;
+$planet-img-width: 224px; // same for all img
+
+$earth-orbit-duration: 10;
+$mercury-orbit-ratio: $earth-orbit-duration * 0.241;
+$venus-orbit-ratio: $earth-orbit-duration * 0.615;
+$earth-orbit-ratio: $earth-orbit-duration;
+$mars-orbit-ratio: $earth-orbit-duration * 1.881;
+$jupiter-orbit-ratio: $earth-orbit-duration * 11.862;
+$saturn-orbit-ratio: $earth-orbit-duration * 29.457;
+$uranus-orbit-ratio: $earth-orbit-duration * 84.017;
+$neptune-orbit-ratio: $earth-orbit-duration * 164.79;
 
 @keyframes twinkle {
   0% {
@@ -36,11 +46,20 @@ $sun-width: 224px;
   }
 }
 
+// #sun {
+//   position: absolute;
+//   z-index: 1;
+//   top: calc(50% - 112px);
+//   left: calc(50% - 112px);
+// }
+
 #sun {
-  top: calc(50% - 112px);
-  left: calc(50% - 112px);
   position: absolute;
   z-index: 1;
+  width: 10%;
+  height: 10%;
+  top: calc(50% - 5%);
+  left: calc(50% - 5%);
 }
 
 .axis {
@@ -52,26 +71,87 @@ $sun-width: 224px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  animation: orbit 10s linear infinite;
+}
 
-  .planet {
-    position: absolute;
-    animation: spin 10s linear infinite;
-  }
+.planet {
+  position: absolute;
+  animation: spin 10s linear infinite;
+}
+
+.axis-mercury {
+  animation: orbit $mercury-orbit-ratio * 1s linear infinite;
 
   #mercury {
     width: 2em;
     height: 2em;
     left: 38%;
   }
+}
+
+.axis-venus {
+  animation: orbit $venus-orbit-ratio * 1s linear infinite;
 
   #venus {
     width: 4em;
     height: 4em;
     left: 33%;
   }
+}
+
+.axis-earth {
+  animation: orbit $earth-orbit-ratio * 1s linear infinite;
 
   #earth {
+    width: 5%;
+    height: 5%;
+    left: 29%;
+  }
+}
+
+.axis-mars {
+  animation: orbit $mars-orbit-ratio * 1s linear infinite;
+
+  #mars {
+    width: 3em;
+    height: 3em;
+    left: 29%;
+  }
+}
+
+.axis-jupiter {
+  animation: orbit $jupiter-orbit-ratio * 1s linear infinite;
+
+  #jupiter {
+    width: 3em;
+    height: 3em;
+    left: 29%;
+  }
+}
+
+.axis-saturn {
+  animation: orbit $saturn-orbit-ratio * 1s linear infinite;
+
+  #saturn {
+    width: 3em;
+    height: 3em;
+    left: 29%;
+  }
+}
+
+.axis-uranus {
+  animation: orbit $uranus-orbit-ratio * 1s linear infinite;
+
+  #uranus {
+    width: 3em;
+    height: 3em;
+    left: 29%;
+  }
+}
+
+.axis-neptune {
+  animation: orbit $neptune-orbit-ratio * 1s linear infinite;
+
+  #neptune {
     width: 3em;
     height: 3em;
     left: 29%;
