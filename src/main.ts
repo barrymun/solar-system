@@ -1,5 +1,5 @@
-import "assets/css/style.scss";
-import "assets/css/solar-system.scss";
+import "assets/css/style.css";
+import "assets/scss/solar-system.scss";
 
 import { totalStars } from "utils/consts";
 
