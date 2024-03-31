@@ -75,7 +75,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
 
 .planet {
   position: fixed;
-  animation: spin 10s linear infinite;
+  // animation: spin 10s linear infinite;
 }
 
 .axis-mercury {
@@ -85,6 +85,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 2em;
     height: 2em;
     left: 38%;
+    animation: spin $mercury-orbit-ratio * 1s linear infinite;
   }
 }
 
@@ -95,6 +96,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 4em;
     height: 4em;
     left: 33%;
+    animation: spin $venus-orbit-ratio * 1s linear infinite;
   }
 }
 
@@ -105,6 +107,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 5%;
     height: 5%;
     left: 29%;
+    animation: spin $earth-orbit-ratio * 1s linear infinite;
   }
 }
 
@@ -115,6 +118,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 3em;
     height: 3em;
     left: 29%;
+    animation: spin $mars-orbit-ratio * 1s linear infinite;
   }
 }
 
@@ -125,6 +129,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 3em;
     height: 3em;
     left: 29%;
+    animation: spin $jupiter-orbit-ratio * 1s linear infinite;
   }
 }
 
@@ -135,6 +140,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 3em;
     height: 3em;
     left: 29%;
+    animation: spin $saturn-orbit-ratio * 1s linear infinite;
   }
 }
 
@@ -145,6 +151,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 3em;
     height: 3em;
     left: 29%;
+    animation: spin $uranus-orbit-ratio * 1s linear infinite;
   }
 }
 
@@ -155,5 +162,6 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
     width: 3em;
     height: 3em;
     left: 29%;
+    animation: spin $neptune-orbit-ratio * 1s linear infinite;
   }
 }
