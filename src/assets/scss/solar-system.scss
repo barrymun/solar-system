@@ -1,14 +1,23 @@
 $planet-img-width: 224px; // same for all img
 
-$earth-orbit-duration: 10;
-$mercury-orbit-ratio: $earth-orbit-duration * 0.241;
-$venus-orbit-ratio: $earth-orbit-duration * 0.615;
-$earth-orbit-ratio: $earth-orbit-duration;
-$mars-orbit-ratio: $earth-orbit-duration * 1.881;
-$jupiter-orbit-ratio: $earth-orbit-duration * 11.862;
-$saturn-orbit-ratio: $earth-orbit-duration * 29.457;
-$uranus-orbit-ratio: $earth-orbit-duration * 84.017;
-$neptune-orbit-ratio: $earth-orbit-duration * 164.79;
+// $orbit-duration: 10;
+// $mercury-orbit-ratio: $orbit-duration * 0.241;
+// $venus-orbit-ratio: $orbit-duration * 0.615;
+// $earth-orbit-ratio: $orbit-duration;
+// $mars-orbit-ratio: $orbit-duration * 1.881;
+// $jupiter-orbit-ratio: $orbit-duration * 11.862;
+// $saturn-orbit-ratio: $orbit-duration * 29.457;
+// $uranus-orbit-ratio: $orbit-duration * 84.017;
+// $neptune-orbit-ratio: $orbit-duration * 164.79;
+$orbit-duration: 20;
+$mercury-orbit-ratio: $orbit-duration * 1;
+$venus-orbit-ratio: $orbit-duration * 0.9;
+$earth-orbit-ratio: $orbit-duration * 0.8;
+$mars-orbit-ratio: $orbit-duration * 0.7;
+$jupiter-orbit-ratio: $orbit-duration * 0.6;
+$saturn-orbit-ratio: $orbit-duration * 0.3;
+$uranus-orbit-ratio: $orbit-duration * 0.5;
+$neptune-orbit-ratio: $orbit-duration * 0.4;
 
 @keyframes twinkle {
   0% {
@@ -46,13 +55,6 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   }
 }
 
-// #sun {
-//   position: fixed;
-//   z-index: 1;
-//   top: calc(50% - 112px);
-//   left: calc(50% - 112px);
-// }
-
 #sun {
   position: fixed;
   z-index: 1;
@@ -60,6 +62,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   height: 10%;
   top: calc(50% - 5%);
   left: calc(50% - 5%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .axis {
@@ -75,16 +80,15 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
 
 .planet {
   position: fixed;
-  // animation: spin 10s linear infinite;
 }
 
 .axis-mercury {
   animation: orbit $mercury-orbit-ratio * 1s linear infinite;
 
   #mercury {
-    width: 2em;
-    height: 2em;
-    left: 38%;
+    width: 3%;
+    height: 3%;
+    left: 41%;
     animation: spin $mercury-orbit-ratio * 1s linear infinite;
   }
 }
@@ -93,9 +97,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   animation: orbit $venus-orbit-ratio * 1s linear infinite;
 
   #venus {
-    width: 4em;
-    height: 4em;
-    left: 33%;
+    width: 4.5%;
+    height: 4.5%;
+    left: 36%;
     animation: spin $venus-orbit-ratio * 1s linear infinite;
   }
 }
@@ -104,9 +108,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   animation: orbit $earth-orbit-ratio * 1s linear infinite;
 
   #earth {
-    width: 5%;
-    height: 5%;
-    left: 29%;
+    width: 4%;
+    height: 4%;
+    left: 32%;
     animation: spin $earth-orbit-ratio * 1s linear infinite;
   }
 }
@@ -115,9 +119,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   animation: orbit $mars-orbit-ratio * 1s linear infinite;
 
   #mars {
-    width: 3em;
-    height: 3em;
-    left: 29%;
+    width: 3%;
+    height: 3%;
+    left: 28%;
     animation: spin $mars-orbit-ratio * 1s linear infinite;
   }
 }
@@ -126,9 +130,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   animation: orbit $jupiter-orbit-ratio * 1s linear infinite;
 
   #jupiter {
-    width: 3em;
-    height: 3em;
-    left: 29%;
+    width: 7%;
+    height: 7%;
+    left: 24%;
     animation: spin $jupiter-orbit-ratio * 1s linear infinite;
   }
 }
@@ -137,9 +141,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   animation: orbit $saturn-orbit-ratio * 1s linear infinite;
 
   #saturn {
-    width: 3em;
-    height: 3em;
-    left: 29%;
+    width: 6%;
+    height: 6%;
+    left: 20%;
     animation: spin $saturn-orbit-ratio * 1s linear infinite;
   }
 }
@@ -148,9 +152,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   animation: orbit $uranus-orbit-ratio * 1s linear infinite;
 
   #uranus {
-    width: 3em;
-    height: 3em;
-    left: 29%;
+    width: 3%;
+    height: 3%;
+    left: 16%;
     animation: spin $uranus-orbit-ratio * 1s linear infinite;
   }
 }
@@ -159,9 +163,9 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
   animation: orbit $neptune-orbit-ratio * 1s linear infinite;
 
   #neptune {
-    width: 3em;
-    height: 3em;
-    left: 29%;
+    width: 7%;
+    height: 7%;
+    left: 12%;
     animation: spin $neptune-orbit-ratio * 1s linear infinite;
   }
 }
