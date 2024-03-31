@@ -23,7 +23,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
 }
 
 .star {
-  position: absolute;
+  position: fixed;
   width: 1px;
   height: 1px;
   background: #fff;
@@ -47,14 +47,14 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
 }
 
 // #sun {
-//   position: absolute;
+//   position: fixed;
 //   z-index: 1;
 //   top: calc(50% - 112px);
 //   left: calc(50% - 112px);
 // }
 
 #sun {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 10%;
   height: 10%;
@@ -63,7 +63,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
 }
 
 .axis {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   border-radius: 50%;
   top: 50%;
@@ -74,7 +74,7 @@ $neptune-orbit-ratio: $earth-orbit-duration * 164.79;
 }
 
 .planet {
-  position: absolute;
+  position: fixed;
   animation: spin 10s linear infinite;
 }
 
