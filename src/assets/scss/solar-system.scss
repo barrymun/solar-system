@@ -11,13 +11,13 @@ $planet-img-width: 224px; // same for all img
 // $neptune-orbit-ratio: $orbit-duration * 164.79;
 $orbit-duration: 20;
 $mercury-orbit-ratio: $orbit-duration * 1;
-$venus-orbit-ratio: $orbit-duration * 0.9;
-$earth-orbit-ratio: $orbit-duration * 0.8;
-$mars-orbit-ratio: $orbit-duration * 0.7;
-$jupiter-orbit-ratio: $orbit-duration * 0.6;
-$saturn-orbit-ratio: $orbit-duration * 0.3;
-$uranus-orbit-ratio: $orbit-duration * 0.5;
-$neptune-orbit-ratio: $orbit-duration * 0.4;
+$venus-orbit-ratio: $orbit-duration * 0.95;
+$earth-orbit-ratio: $orbit-duration * 0.9;
+$mars-orbit-ratio: $orbit-duration * 0.85;
+$jupiter-orbit-ratio: $orbit-duration * 0.8;
+$saturn-orbit-ratio: $orbit-duration * 0.75;
+$uranus-orbit-ratio: $orbit-duration * 0.7;
+$neptune-orbit-ratio: $orbit-duration * 0.65;
 
 @keyframes twinkle {
   0% {
@@ -55,6 +55,17 @@ $neptune-orbit-ratio: $orbit-duration * 0.4;
   }
 }
 
+@keyframes trail {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
 #sun {
   position: fixed;
   z-index: 1;
@@ -67,6 +78,22 @@ $neptune-orbit-ratio: $orbit-duration * 0.4;
   align-items: center;
 }
 
+// .mercury-orbit {
+//   position: fixed;
+//   z-index: 1;
+//   width: 50px;
+//   height: 50px;
+//   border: solid 1px #fff;
+//   border-radius: 50%;
+//   // width: 10%;
+//   // height: 10%;
+//   top: calc(50% - 5%);
+//   left: calc(50% - 5%);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
 .axis {
   position: fixed;
   z-index: 1;
@@ -78,19 +105,74 @@ $neptune-orbit-ratio: $orbit-duration * 0.4;
   justify-content: flex-end;
 }
 
+// .axis::before {
+//   content: '';
+//   width: 10px;
+//   height: 10px;
+// }
+
+// .axis::before {
+//   // content: '';
+//   // position: absolute;
+//   // width: 1px;
+//   // height: 1px;
+//   // background-color: white;
+//   // border-radius: 50%;
+//   // animation: trail 1s linear infinite;
+//   content: '';
+//   // border-width: 10px;
+//   // border-color: white transparent transparent;
+//   width: 10px;
+//   height: 10px;
+// }
+
 .planet {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .axis-mercury {
   animation: orbit $mercury-orbit-ratio * 1s linear infinite;
 
   #mercury {
-    width: 3%;
-    height: 3%;
-    left: 41%;
+    width: 2.5%;
+    height: 2.5%;
+    left: 40.5%;
     animation: spin $mercury-orbit-ratio * 1s linear infinite;
   }
+
+  // #mercury::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 2px;
+  //   height: 40px;
+  //   background-color: white;
+  //   border-radius: 50%;
+  //   // animation: trail 1s linear infinite;
+  // }
+
+  // #mercury::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 100px; 
+  //   height: 100px;
+  //   border: solid 2px #fff;
+  //   // border-color: #fff transparent transparent transparent;
+  //   border-radius: 50%/100px 100px 0 0;
+  //   transform: rotate(45deg);
+  // }
+
+  // #mercury::before {
+  //   content: '';
+  //   position: absolute;
+  //   clip-path: circle(50px);
+  //   border: solid 2px #fff;
+  //   width: 50px;
+  //   height: 50px;
+  //   border-radius: 50%;
+  // }
 }
 
 .axis-venus {
