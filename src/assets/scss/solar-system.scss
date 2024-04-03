@@ -29,8 +29,16 @@ html, body {
   align-items: center;
   justify-content: center;
 
-  @media (width <= 768px) {
+  @media (360px < width <= 768px) {
     scale: 0.6;
+  }
+
+  @media (280px < width <= 360px) {
+    scale: 0.4;
+  }
+
+  @media (width <= 280px) {
+    scale: 0.3;
   }
 }
 
