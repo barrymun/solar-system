@@ -1,27 +1,16 @@
-$orbit-duration: 20;
-$mercury-orbit-ratio: $orbit-duration * 1;
-$venus-orbit-ratio: $orbit-duration * 0.95;
-$earth-orbit-ratio: $orbit-duration * 0.9;
-$mars-orbit-ratio: $orbit-duration * 0.85;
-$jupiter-orbit-ratio: $orbit-duration * 0.8;
-$saturn-orbit-ratio: $orbit-duration * 0.75;
-$uranus-orbit-ratio: $orbit-duration * 0.7;
-$neptune-orbit-ratio: $orbit-duration * 0.65;
+@import 'src/assets/scss/variables';
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255 255 255 / 87%);
   background-color: #0D1B2A; /* starry night */
-
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
 html, body {
@@ -40,7 +29,7 @@ html, body {
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     scale: 0.6;
   }
 }
@@ -86,7 +75,7 @@ img {
   justify-content: flex-end;
   border-width: 0.1em 0.1em 0 0;
   border-style: solid;
-  border-color: #fff transparent transparent transparent;
+  border-color: #fff transparent transparent;
   border-radius: 50%;
 }
 
@@ -198,9 +187,11 @@ img {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.2;
   }
+
   100% {
     opacity: 1;
   }
