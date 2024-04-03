@@ -64,6 +64,7 @@ img {
 .mercury,
 .venus,
 .earth,
+.earth-moon,
 .mars,
 .jupiter,
 .saturn,
@@ -111,10 +112,27 @@ img {
   padding: 1.0em;
   animation: orbit $earth-orbit-ratio * 1s linear infinite;
 
-  .earth-axis {
-    width: 1.5em;
-    height: 1.5em;
-    animation: spin $earth-orbit-ratio * 1s linear infinite;
+  > div {
+    padding: 0.4em;
+
+    .earth-axis {
+      width: 1.2em;
+      height: 1.2em;
+      animation: spin $earth-orbit-ratio * 1s linear infinite;
+    }
+  }
+
+  .earth-moon {
+    width: 2em;
+    height: 2em;
+    padding: 0.1em;
+    animation: orbit $earth-moon-orbit-ratio * 1s linear infinite;
+
+    .earth-moon-axis {
+      width: 0.3em;
+      height: 0.3em;
+      animation: spin $earth-moon-orbit-ratio * 1s linear infinite;
+    }
   }
 }
 
