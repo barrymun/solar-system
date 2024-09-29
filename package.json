@@ -39,5 +39,9 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-tsconfig-paths": "^4.3.1"
-  }
+  },
+  "engines": {
+    "node": "20.13.1"
+  },
+  "packageManager": "bun@1.0.26"
 }
